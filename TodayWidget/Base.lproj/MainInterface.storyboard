@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aSE-cI-PIc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
+            <string>Avenir-Heavy</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="PCN-MZ-Oui">
+            <objects>
+                <viewController id="aSE-cI-PIc" customClass="TodayViewController" customModule="DripWidget" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="oTW-2f-Uei">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zmU-l4-pgX">
+                                <rect key="frame" x="0.0" y="44" width="320" height="121"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyN-WA-EXI" customClass="UIBorderedButton" customModule="DripWidget" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="10" width="300" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="UsG-yH-VG4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                        <state key="normal" title="+2 Cups">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="mainButtonPressed" destination="aSE-cI-PIc" eventType="touchUpInside" id="2lx-qV-GaP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGT-qy-iIH" customClass="UIBorderedButton" customModule="DripWidget" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="66" width="145" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="qWP-e2-TTh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                        <state key="normal" title="+2 Cups">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="leftButtonPressed" destination="aSE-cI-PIc" eventType="touchUpInside" id="GTb-kE-IrP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doO-LE-s5E" customClass="UIBorderedButton" customModule="DripWidget" customModuleProvider="target">
+                                        <rect key="frame" x="165" y="66" width="145" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="Jaa-Fh-phV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                        <state key="normal" title="+2 Cups">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="rightButtonPressed" destination="aSE-cI-PIc" eventType="touchUpInside" id="Xfy-lH-dRu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.3294117647" green="0.42352941179999998" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="MGT-qy-iIH" firstAttribute="leading" secondItem="zmU-l4-pgX" secondAttribute="leading" constant="10" id="98L-ag-4W0"/>
+                                    <constraint firstAttribute="height" constant="121" id="EzU-xB-kJg"/>
+                                    <constraint firstAttribute="trailing" secondItem="cyN-WA-EXI" secondAttribute="trailing" constant="10" id="KiB-nj-qrJ"/>
+                                    <constraint firstItem="doO-LE-s5E" firstAttribute="width" secondItem="MGT-qy-iIH" secondAttribute="width" id="LIQ-As-isW"/>
+                                    <constraint firstItem="cyN-WA-EXI" firstAttribute="leading" secondItem="zmU-l4-pgX" secondAttribute="leading" constant="10" id="Y9q-XI-5Pm"/>
+                                    <constraint firstAttribute="bottom" secondItem="MGT-qy-iIH" secondAttribute="bottom" constant="10" id="Yyv-Cv-5im"/>
+                                    <constraint firstAttribute="bottom" secondItem="doO-LE-s5E" secondAttribute="bottom" constant="10" id="ZC7-Cf-XJO"/>
+                                    <constraint firstItem="doO-LE-s5E" firstAttribute="leading" secondItem="MGT-qy-iIH" secondAttribute="trailing" constant="10" id="a5L-cG-K4b"/>
+                                    <constraint firstItem="cyN-WA-EXI" firstAttribute="top" secondItem="zmU-l4-pgX" secondAttribute="top" constant="10" id="t08-ll-GPv"/>
+                                    <constraint firstAttribute="trailing" secondItem="doO-LE-s5E" secondAttribute="trailing" constant="10" id="wvf-1M-Iza"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1p2-Pm-tLJ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 ml" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3x-s3-oL9">
+                                        <rect key="frame" x="12" y="10" width="296" height="24"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                        <color key="textColor" red="0.32691705230000001" green="0.42467555400000001" blue="0.96480309959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="q3x-s3-oL9" firstAttribute="leading" secondItem="1p2-Pm-tLJ" secondAttribute="leading" constant="12" id="XKL-oR-yMB"/>
+                                    <constraint firstItem="q3x-s3-oL9" firstAttribute="top" secondItem="1p2-Pm-tLJ" secondAttribute="top" constant="10" id="auf-7W-q2w"/>
+                                    <constraint firstAttribute="bottom" secondItem="q3x-s3-oL9" secondAttribute="bottom" constant="10" id="dJx-9N-6xA"/>
+                                    <constraint firstAttribute="height" constant="44" id="tJy-Di-na5"/>
+                                    <constraint firstAttribute="trailing" secondItem="q3x-s3-oL9" secondAttribute="trailing" constant="12" id="wEj-I0-mhQ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="1p2-Pm-tLJ" firstAttribute="trailing" secondItem="bem-aO-ivz" secondAttribute="trailing" id="BaE-6E-5tE"/>
+                            <constraint firstItem="zmU-l4-pgX" firstAttribute="top" secondItem="1p2-Pm-tLJ" secondAttribute="bottom" id="HZ0-Ub-jmj"/>
+                            <constraint firstItem="1p2-Pm-tLJ" firstAttribute="top" secondItem="bem-aO-ivz" secondAttribute="top" id="Sg9-fn-g9F"/>
+                            <constraint firstItem="1p2-Pm-tLJ" firstAttribute="leading" secondItem="bem-aO-ivz" secondAttribute="leading" id="cXf-yZ-6F3"/>
+                            <constraint firstItem="zmU-l4-pgX" firstAttribute="trailing" secondItem="bem-aO-ivz" secondAttribute="trailing" id="fFP-6w-3nI"/>
+                            <constraint firstItem="zmU-l4-pgX" firstAttribute="leading" secondItem="bem-aO-ivz" secondAttribute="leading" id="lZH-0q-KZx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bem-aO-ivz"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="110"/>
+                    <connections>
+                        <outlet property="drankTodayValueLabel" destination="q3x-s3-oL9" id="zcu-Xx-2md"/>
+                        <outlet property="leftDrinkButton" destination="MGT-qy-iIH" id="God-oR-qdO"/>
+                        <outlet property="mainDrinkButton" destination="cyN-WA-EXI" id="NMI-bn-WpD"/>
+                        <outlet property="rightDrinkButton" destination="doO-LE-s5E" id="vds-Rl-ynz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gwZ-FH-L4r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="90" y="60"/>
+        </scene>
+    </scenes>
+</document>
