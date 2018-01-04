@@ -8,9 +8,16 @@
 
 import UIKit
 import HealthKit
+import YXWaveView
 
 class MainViewController: UIViewController {
 
+    
+    //MARK: - Properties
+    
+    fileprivate var waveView: YXWaveView?
+    
+    @IBOutlet weak var waveContainer: UIView!
     
     @IBOutlet weak var settingsButton: UIButton!
     
@@ -25,6 +32,52 @@ class MainViewController: UIViewController {
     @IBOutlet weak var rightDrinkButton: UIBorderedButton!
 
 
+    
+    //MARK: - Life Cycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // request authroizaiton
+        HealthKitManager.shared.requestAuthorization({ (finished, error) in
+        })
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // set global unit type
+        let unitTypeString = UserDefaults.shared.string(forKey: DefaultsKey.unitType)!
+        let unitType = UnitType(rawValue: unitTypeString)!
+        
+        // style buttons for unit type & preferences
+        let leftSize = UserDefaults.shared.double(forKey: DefaultsKey.leftKey(for: unitType))
+        let rightSize = UserDefaults.shared.double(forKey: DefaultsKey.rightKey(for: unitType))
+        let mainSize = UserDefaults.shared.double(forKey: DefaultsKey.mainKey(for: unitType))
+        leftDrinkButton.setTitle("+\(leftSize) \(unitType.toUnitString())", for: [])
+        rightDrinkButton.setTitle("+\(rightSize) \(unitType.toUnitString())", for: [])
+        mainDrinkButton.setTitle("+\(mainSize) \(unitType.toUnitString())", for: [])
+        
+        self.refreshTodaysDrinkCount()
+        
+        // start wave animation
+        waveView = YXWaveView(frame: waveContainer.bounds,
+                              color: ColorPalette.blue.color())
+        waveView?.waveHeight = 10
+        waveContainer.addSubview(waveView!)
+        waveView?.start()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // end wave animation
+        waveView?.stop()
+        waveView?.removeFromSuperview()
+        waveView = nil
+    }
+    
     
     func refreshTodaysDrinkCount() {
         HealthKitManager.shared.getDietaryWater(on: Date()) { quantity in

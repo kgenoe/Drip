@@ -138,7 +138,7 @@ open class YXWaveView: UIView {
     /**
      Wave animation
      */
-    func wave() {
+    @objc func wave() {
         
         if _starting {
             if _waveHeight < waveHeight {

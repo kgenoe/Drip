@@ -21,6 +21,7 @@
 		2712F8461FFED99300AE9DA0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2712F8451FFED99300AE9DA0 /* HealthKit.framework */; };
 		2712F8481FFED9B000AE9DA0 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F8471FFED9B000AE9DA0 /* HealthKitManager.swift */; };
 		2712F84A1FFEDB7500AE9DA0 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F8491FFEDB7500AE9DA0 /* Utilities.swift */; };
+		2712F84C1FFEDD2900AE9DA0 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F84B1FFEDD2900AE9DA0 /* ColorPalette.swift */; };
 		7910C7CEB19E4BC2B19259F8 /* Pods_DripSimpleHydration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE5F8C685889C52B36F1A323 /* Pods_DripSimpleHydration.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		2712F8451FFED99300AE9DA0 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		2712F8471FFED9B000AE9DA0 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 		2712F8491FFEDB7500AE9DA0 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		2712F84B1FFEDD2900AE9DA0 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = SOURCE_ROOT; };
 		528A1F0FE088460DAADA90D9 /* Pods-DripSimpleHydration.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DripSimpleHydration.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DripSimpleHydration/Pods-DripSimpleHydration.debug.xcconfig"; sourceTree = "<group>"; };
 		F555FB150D2F156823634388 /* Pods-DripSimpleHydration.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DripSimpleHydration.release.xcconfig"; path = "Pods/Target Support Files/Pods-DripSimpleHydration/Pods-DripSimpleHydration.release.xcconfig"; sourceTree = "<group>"; };
 		FE5F8C685889C52B36F1A323 /* Pods_DripSimpleHydration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DripSimpleHydration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +89,7 @@
 				2712F8351FFED56200AE9DA0 /* MainViewController.swift */,
 				2712F8371FFED5E500AE9DA0 /* SettingsViewController.swift */,
 				2712F8431FFED90E00AE9DA0 /* UIBorderedButton.swift */,
+				2712F84B1FFEDD2900AE9DA0 /* ColorPalette.swift */,
 				2712F83C1FFED68400AE9DA0 /* Helpers */,
 				2712F8231FFED34400AE9DA0 /* Main.storyboard */,
 				2712F8261FFED34400AE9DA0 /* Assets.xcassets */,
@@ -284,6 +287,7 @@
 				2712F83E1FFED6A200AE9DA0 /* DefaultsKey.swift in Sources */,
 				2712F84A1FFEDB7500AE9DA0 /* Utilities.swift in Sources */,
 				2712F8481FFED9B000AE9DA0 /* HealthKitManager.swift in Sources */,
+				2712F84C1FFEDD2900AE9DA0 /* ColorPalette.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

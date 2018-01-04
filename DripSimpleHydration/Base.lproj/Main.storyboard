@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MlE-0p-rCO">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -162,6 +162,7 @@
                         <outlet property="mainDrinkButton" destination="9S7-mO-Ey2" id="Hdy-ZY-7M0"/>
                         <outlet property="rightDrinkButton" destination="0tF-j8-iE8" id="Cbt-ZH-GDY"/>
                         <outlet property="settingsButton" destination="hqn-1R-HPt" id="qAc-ti-ahw"/>
+                        <outlet property="waveContainer" destination="WzW-2W-WVj" id="aBd-FA-578"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5XR-a4-cWK" sceneMemberID="firstResponder"/>
