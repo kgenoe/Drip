@@ -21,6 +21,7 @@
 		2712F8461FFED99300AE9DA0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2712F8451FFED99300AE9DA0 /* HealthKit.framework */; };
 		2712F8481FFED9B000AE9DA0 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F8471FFED9B000AE9DA0 /* HealthKitManager.swift */; };
 		2712F84A1FFEDB7500AE9DA0 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F8491FFEDB7500AE9DA0 /* Utilities.swift */; };
+		7910C7CEB19E4BC2B19259F8 /* Pods_DripSimpleHydration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE5F8C685889C52B36F1A323 /* Pods_DripSimpleHydration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,9 @@
 		2712F8451FFED99300AE9DA0 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		2712F8471FFED9B000AE9DA0 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 		2712F8491FFEDB7500AE9DA0 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		528A1F0FE088460DAADA90D9 /* Pods-DripSimpleHydration.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DripSimpleHydration.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DripSimpleHydration/Pods-DripSimpleHydration.debug.xcconfig"; sourceTree = "<group>"; };
+		F555FB150D2F156823634388 /* Pods-DripSimpleHydration.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DripSimpleHydration.release.xcconfig"; path = "Pods/Target Support Files/Pods-DripSimpleHydration/Pods-DripSimpleHydration.release.xcconfig"; sourceTree = "<group>"; };
+		FE5F8C685889C52B36F1A323 /* Pods_DripSimpleHydration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DripSimpleHydration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +53,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2712F8461FFED99300AE9DA0 /* HealthKit.framework in Frameworks */,
+				7910C7CEB19E4BC2B19259F8 /* Pods_DripSimpleHydration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +66,7 @@
 				2712F81E1FFED34400AE9DA0 /* DripSimpleHydration */,
 				2712F81D1FFED34400AE9DA0 /* Products */,
 				2712F8321FFED51C00AE9DA0 /* Frameworks */,
+				951D52ECE5805B5F320D3934 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				2712F8451FFED99300AE9DA0 /* HealthKit.framework */,
+				FE5F8C685889C52B36F1A323 /* Pods_DripSimpleHydration.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -118,6 +125,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		951D52ECE5805B5F320D3934 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				528A1F0FE088460DAADA90D9 /* Pods-DripSimpleHydration.debug.xcconfig */,
+				F555FB150D2F156823634388 /* Pods-DripSimpleHydration.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -125,9 +141,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2712F82E1FFED34400AE9DA0 /* Build configuration list for PBXNativeTarget "DripSimpleHydration" */;
 			buildPhases = (
+				20758867EB266873A7FD4642 /* [CP] Check Pods Manifest.lock */,
 				2712F8181FFED34400AE9DA0 /* Sources */,
 				2712F8191FFED34400AE9DA0 /* Frameworks */,
 				2712F81A1FFED34400AE9DA0 /* Resources */,
+				6E836EC3336EA939825DBAC0 /* [CP] Embed Pods Frameworks */,
+				0679769872D50F8FE6089EA2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -195,6 +214,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0679769872D50F8FE6089EA2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DripSimpleHydration/Pods-DripSimpleHydration-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		20758867EB266873A7FD4642 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DripSimpleHydration-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E836EC3336EA939825DBAC0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DripSimpleHydration/Pods-DripSimpleHydration-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/YXWaveView/YXWaveView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YXWaveView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DripSimpleHydration/Pods-DripSimpleHydration-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2712F8181FFED34400AE9DA0 /* Sources */ = {
@@ -345,6 +418,7 @@
 		};
 		2712F82F1FFED34400AE9DA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 528A1F0FE088460DAADA90D9 /* Pods-DripSimpleHydration.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DripSimpleHydration/DripSimpleHydration.entitlements;
@@ -361,6 +435,7 @@
 		};
 		2712F8301FFED34400AE9DA0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F555FB150D2F156823634388 /* Pods-DripSimpleHydration.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DripSimpleHydration/DripSimpleHydration.entitlements;
