@@ -17,11 +17,11 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var drankTodayValueLabel: UILabel!
     
-    @IBOutlet weak var mainDrinkButton: UIButton!
+    @IBOutlet weak var mainDrinkButton: UIBorderedButton!
     
-    @IBOutlet weak var leftDrinkButton: UIButton!
+    @IBOutlet weak var leftDrinkButton: UIBorderedButton!
     
-    @IBOutlet weak var rightDrinkButton: UIButton!
+    @IBOutlet weak var rightDrinkButton: UIBorderedButton!
 
 
     

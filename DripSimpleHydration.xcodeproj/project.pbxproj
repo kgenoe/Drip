@@ -17,6 +17,7 @@
 		2712F83E1FFED6A200AE9DA0 /* DefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F83D1FFED6A200AE9DA0 /* DefaultsKey.swift */; };
 		2712F8401FFED6E300AE9DA0 /* SharedUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F83F1FFED6E300AE9DA0 /* SharedUserDefaults.swift */; };
 		2712F8421FFED76F00AE9DA0 /* InitialDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F8411FFED76F00AE9DA0 /* InitialDefaults.swift */; };
+		2712F8441FFED90E00AE9DA0 /* UIBorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F8431FFED90E00AE9DA0 /* UIBorderedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		2712F83D1FFED6A200AE9DA0 /* DefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsKey.swift; sourceTree = "<group>"; };
 		2712F83F1FFED6E300AE9DA0 /* SharedUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedUserDefaults.swift; sourceTree = "<group>"; };
 		2712F8411FFED76F00AE9DA0 /* InitialDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialDefaults.swift; sourceTree = "<group>"; };
+		2712F8431FFED90E00AE9DA0 /* UIBorderedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBorderedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				2712F8391FFED62300AE9DA0 /* Model */,
 				2712F8351FFED56200AE9DA0 /* MainViewController.swift */,
 				2712F8371FFED5E500AE9DA0 /* SettingsViewController.swift */,
+				2712F8431FFED90E00AE9DA0 /* UIBorderedButton.swift */,
 				2712F83C1FFED68400AE9DA0 /* Helpers */,
 				2712F8231FFED34400AE9DA0 /* Main.storyboard */,
 				2712F8261FFED34400AE9DA0 /* Assets.xcassets */,
@@ -187,6 +190,7 @@
 			files = (
 				2712F8201FFED34400AE9DA0 /* AppDelegate.swift in Sources */,
 				2712F8401FFED6E300AE9DA0 /* SharedUserDefaults.swift in Sources */,
+				2712F8441FFED90E00AE9DA0 /* UIBorderedButton.swift in Sources */,
 				2712F8421FFED76F00AE9DA0 /* InitialDefaults.swift in Sources */,
 				2712F8361FFED56200AE9DA0 /* MainViewController.swift in Sources */,
 				2712F8381FFED5E500AE9DA0 /* SettingsViewController.swift in Sources */,
