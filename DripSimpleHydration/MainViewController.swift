@@ -33,7 +33,7 @@ class MainViewController: UIViewController {
                 let unitType = UnitType(rawValue: unitTypeString)!
                 let hkUnit = unitType.associatedHKUnit()
                 let displayValue = quantity.doubleValue(for: hkUnit)
-                self.drankTodayValueLabel.text = "\(displayValue) \(unitType.toUnitString())"
+                self.drankTodayValueLabel.text = "\(displayValue.rounded(toPlaces: 1)) \(unitType.toUnitString())"
             }
         }
     }

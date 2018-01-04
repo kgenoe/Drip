@@ -20,6 +20,7 @@
 		2712F8441FFED90E00AE9DA0 /* UIBorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F8431FFED90E00AE9DA0 /* UIBorderedButton.swift */; };
 		2712F8461FFED99300AE9DA0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2712F8451FFED99300AE9DA0 /* HealthKit.framework */; };
 		2712F8481FFED9B000AE9DA0 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F8471FFED9B000AE9DA0 /* HealthKitManager.swift */; };
+		2712F84A1FFEDB7500AE9DA0 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F8491FFEDB7500AE9DA0 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		2712F8431FFED90E00AE9DA0 /* UIBorderedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBorderedButton.swift; sourceTree = "<group>"; };
 		2712F8451FFED99300AE9DA0 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		2712F8471FFED9B000AE9DA0 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		2712F8491FFEDB7500AE9DA0 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				2712F83F1FFED6E300AE9DA0 /* SharedUserDefaults.swift */,
 				2712F8411FFED76F00AE9DA0 /* InitialDefaults.swift */,
 				2712F8471FFED9B000AE9DA0 /* HealthKitManager.swift */,
+				2712F8491FFEDB7500AE9DA0 /* Utilities.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				2712F8381FFED5E500AE9DA0 /* SettingsViewController.swift in Sources */,
 				2712F83B1FFED62F00AE9DA0 /* UnitType.swift in Sources */,
 				2712F83E1FFED6A200AE9DA0 /* DefaultsKey.swift in Sources */,
+				2712F84A1FFEDB7500AE9DA0 /* Utilities.swift in Sources */,
 				2712F8481FFED9B000AE9DA0 /* HealthKitManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
