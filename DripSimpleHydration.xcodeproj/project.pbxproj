@@ -13,6 +13,9 @@
 		2712F82A1FFED34400AE9DA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2712F8281FFED34400AE9DA0 /* LaunchScreen.storyboard */; };
 		2712F8361FFED56200AE9DA0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F8351FFED56200AE9DA0 /* MainViewController.swift */; };
 		2712F8381FFED5E500AE9DA0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F8371FFED5E500AE9DA0 /* SettingsViewController.swift */; };
+		2712F83B1FFED62F00AE9DA0 /* UnitType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F83A1FFED62F00AE9DA0 /* UnitType.swift */; };
+		2712F83E1FFED6A200AE9DA0 /* DefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F83D1FFED6A200AE9DA0 /* DefaultsKey.swift */; };
+		2712F8401FFED6E300AE9DA0 /* SharedUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F83F1FFED6E300AE9DA0 /* SharedUserDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,9 @@
 		2712F8311FFED36F00AE9DA0 /* DripSimpleHydration.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DripSimpleHydration.entitlements; sourceTree = "<group>"; };
 		2712F8351FFED56200AE9DA0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2712F8371FFED5E500AE9DA0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		2712F83A1FFED62F00AE9DA0 /* UnitType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitType.swift; sourceTree = "<group>"; };
+		2712F83D1FFED6A200AE9DA0 /* DefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsKey.swift; sourceTree = "<group>"; };
+		2712F83F1FFED6E300AE9DA0 /* SharedUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedUserDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +66,10 @@
 			children = (
 				2712F8311FFED36F00AE9DA0 /* DripSimpleHydration.entitlements */,
 				2712F81F1FFED34400AE9DA0 /* AppDelegate.swift */,
+				2712F8391FFED62300AE9DA0 /* Model */,
 				2712F8351FFED56200AE9DA0 /* MainViewController.swift */,
 				2712F8371FFED5E500AE9DA0 /* SettingsViewController.swift */,
+				2712F83C1FFED68400AE9DA0 /* Helpers */,
 				2712F8231FFED34400AE9DA0 /* Main.storyboard */,
 				2712F8261FFED34400AE9DA0 /* Assets.xcassets */,
 				2712F8281FFED34400AE9DA0 /* LaunchScreen.storyboard */,
@@ -75,6 +83,23 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2712F8391FFED62300AE9DA0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2712F83A1FFED62F00AE9DA0 /* UnitType.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2712F83C1FFED68400AE9DA0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2712F83D1FFED6A200AE9DA0 /* DefaultsKey.swift */,
+				2712F83F1FFED6E300AE9DA0 /* SharedUserDefaults.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,8 +183,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2712F8201FFED34400AE9DA0 /* AppDelegate.swift in Sources */,
+				2712F8401FFED6E300AE9DA0 /* SharedUserDefaults.swift in Sources */,
 				2712F8361FFED56200AE9DA0 /* MainViewController.swift in Sources */,
 				2712F8381FFED5E500AE9DA0 /* SettingsViewController.swift in Sources */,
+				2712F83B1FFED62F00AE9DA0 /* UnitType.swift in Sources */,
+				2712F83E1FFED6A200AE9DA0 /* DefaultsKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
