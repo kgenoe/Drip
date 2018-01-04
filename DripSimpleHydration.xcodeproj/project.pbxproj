@@ -8,21 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		2712F8201FFED34400AE9DA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F81F1FFED34400AE9DA0 /* AppDelegate.swift */; };
-		2712F8221FFED34400AE9DA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F8211FFED34400AE9DA0 /* ViewController.swift */; };
 		2712F8251FFED34400AE9DA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2712F8231FFED34400AE9DA0 /* Main.storyboard */; };
 		2712F8271FFED34400AE9DA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2712F8261FFED34400AE9DA0 /* Assets.xcassets */; };
 		2712F82A1FFED34400AE9DA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2712F8281FFED34400AE9DA0 /* LaunchScreen.storyboard */; };
+		2712F8361FFED56200AE9DA0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F8351FFED56200AE9DA0 /* MainViewController.swift */; };
+		2712F8381FFED5E500AE9DA0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F8371FFED5E500AE9DA0 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2712F81C1FFED34400AE9DA0 /* DripSimpleHydration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DripSimpleHydration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2712F81F1FFED34400AE9DA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2712F8211FFED34400AE9DA0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2712F8241FFED34400AE9DA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2712F8261FFED34400AE9DA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2712F8291FFED34400AE9DA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2712F82B1FFED34400AE9DA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2712F8311FFED36F00AE9DA0 /* DripSimpleHydration.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DripSimpleHydration.entitlements; sourceTree = "<group>"; };
+		2712F8351FFED56200AE9DA0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		2712F8371FFED5E500AE9DA0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				2712F8311FFED36F00AE9DA0 /* DripSimpleHydration.entitlements */,
 				2712F81F1FFED34400AE9DA0 /* AppDelegate.swift */,
-				2712F8211FFED34400AE9DA0 /* ViewController.swift */,
+				2712F8351FFED56200AE9DA0 /* MainViewController.swift */,
+				2712F8371FFED5E500AE9DA0 /* SettingsViewController.swift */,
 				2712F8231FFED34400AE9DA0 /* Main.storyboard */,
 				2712F8261FFED34400AE9DA0 /* Assets.xcassets */,
 				2712F8281FFED34400AE9DA0 /* LaunchScreen.storyboard */,
@@ -154,8 +157,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2712F8221FFED34400AE9DA0 /* ViewController.swift in Sources */,
 				2712F8201FFED34400AE9DA0 /* AppDelegate.swift in Sources */,
+				2712F8361FFED56200AE9DA0 /* MainViewController.swift in Sources */,
+				2712F8381FFED5E500AE9DA0 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
