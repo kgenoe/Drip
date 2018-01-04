@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HealthKit
 
 class MainViewController: UIViewController {
 
@@ -25,20 +26,49 @@ class MainViewController: UIViewController {
 
 
     
+    func refreshTodaysDrinkCount() {
+        HealthKitManager.shared.getDietaryWater(on: Date()) { quantity in
+            DispatchQueue.main.async {
+                let unitTypeString = UserDefaults.shared.string(forKey: DefaultsKey.unitType)!
+                let unitType = UnitType(rawValue: unitTypeString)!
+                let hkUnit = unitType.associatedHKUnit()
+                let displayValue = quantity.doubleValue(for: hkUnit)
+                self.drankTodayValueLabel.text = "\(displayValue) \(unitType.toUnitString())"
+            }
+        }
+    }
     
     
     
     //MARK: - UI Actions
     @IBAction func leftButtonPressed() {
- 
+        let unitTypeString = UserDefaults.shared.string(forKey: DefaultsKey.unitType)!
+        let unitType = UnitType(rawValue: unitTypeString)!
+        let value = UserDefaults.shared.double(forKey: DefaultsKey.leftKey(for: unitType))
+        let quantity = HKQuantity(unit: unitType.associatedHKUnit(), doubleValue: value)
+        HealthKitManager.shared.saveDietaryWater(quantity: quantity) {
+            self.refreshTodaysDrinkCount()
+        }
     }
     
     
     @IBAction func rightButtonPressed() {
-
+        let unitTypeString = UserDefaults.shared.string(forKey: DefaultsKey.unitType)!
+        let unitType = UnitType(rawValue: unitTypeString)!
+        let value = UserDefaults.shared.double(forKey: DefaultsKey.rightKey(for: unitType))
+        let quantity = HKQuantity(unit: unitType.associatedHKUnit(), doubleValue: value)
+        HealthKitManager.shared.saveDietaryWater(quantity: quantity) {
+            self.refreshTodaysDrinkCount()
+        }
     }
     
     @IBAction func mainButtonPressed() {
- 
+        let unitTypeString = UserDefaults.shared.string(forKey: DefaultsKey.unitType)!
+        let unitType = UnitType(rawValue: unitTypeString)!
+        let value = UserDefaults.shared.double(forKey: DefaultsKey.mainKey(for: unitType))
+        let quantity = HKQuantity(unit: unitType.associatedHKUnit(), doubleValue: value)
+        HealthKitManager.shared.saveDietaryWater(quantity: quantity) {
+            self.refreshTodaysDrinkCount()
+        }
     }
 }
