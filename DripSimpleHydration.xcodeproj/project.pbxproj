@@ -22,6 +22,7 @@
 		2712F8261FFED34400AE9DA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2712F8291FFED34400AE9DA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2712F82B1FFED34400AE9DA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2712F8311FFED36F00AE9DA0 /* DripSimpleHydration.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DripSimpleHydration.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +41,7 @@
 			children = (
 				2712F81E1FFED34400AE9DA0 /* DripSimpleHydration */,
 				2712F81D1FFED34400AE9DA0 /* Products */,
+				2712F8321FFED51C00AE9DA0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +56,7 @@
 		2712F81E1FFED34400AE9DA0 /* DripSimpleHydration */ = {
 			isa = PBXGroup;
 			children = (
+				2712F8311FFED36F00AE9DA0 /* DripSimpleHydration.entitlements */,
 				2712F81F1FFED34400AE9DA0 /* AppDelegate.swift */,
 				2712F8211FFED34400AE9DA0 /* ViewController.swift */,
 				2712F8231FFED34400AE9DA0 /* Main.storyboard */,
@@ -62,6 +65,13 @@
 				2712F82B1FFED34400AE9DA0 /* Info.plist */,
 			);
 			path = DripSimpleHydration;
+			sourceTree = "<group>";
+		};
+		2712F8321FFED51C00AE9DA0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +107,14 @@
 					2712F81B1FFED34400AE9DA0 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -274,6 +292,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DripSimpleHydration/DripSimpleHydration.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V9CEBD9ZBT;
 				INFOPLIST_FILE = DripSimpleHydration/Info.plist;
@@ -289,6 +308,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DripSimpleHydration/DripSimpleHydration.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V9CEBD9ZBT;
 				INFOPLIST_FILE = DripSimpleHydration/Info.plist;
