@@ -16,6 +16,7 @@
 		2712F83B1FFED62F00AE9DA0 /* UnitType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F83A1FFED62F00AE9DA0 /* UnitType.swift */; };
 		2712F83E1FFED6A200AE9DA0 /* DefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F83D1FFED6A200AE9DA0 /* DefaultsKey.swift */; };
 		2712F8401FFED6E300AE9DA0 /* SharedUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F83F1FFED6E300AE9DA0 /* SharedUserDefaults.swift */; };
+		2712F8421FFED76F00AE9DA0 /* InitialDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F8411FFED76F00AE9DA0 /* InitialDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		2712F83A1FFED62F00AE9DA0 /* UnitType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitType.swift; sourceTree = "<group>"; };
 		2712F83D1FFED6A200AE9DA0 /* DefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsKey.swift; sourceTree = "<group>"; };
 		2712F83F1FFED6E300AE9DA0 /* SharedUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedUserDefaults.swift; sourceTree = "<group>"; };
+		2712F8411FFED76F00AE9DA0 /* InitialDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				2712F83D1FFED6A200AE9DA0 /* DefaultsKey.swift */,
 				2712F83F1FFED6E300AE9DA0 /* SharedUserDefaults.swift */,
+				2712F8411FFED76F00AE9DA0 /* InitialDefaults.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			files = (
 				2712F8201FFED34400AE9DA0 /* AppDelegate.swift in Sources */,
 				2712F8401FFED6E300AE9DA0 /* SharedUserDefaults.swift in Sources */,
+				2712F8421FFED76F00AE9DA0 /* InitialDefaults.swift in Sources */,
 				2712F8361FFED56200AE9DA0 /* MainViewController.swift in Sources */,
 				2712F8381FFED5E500AE9DA0 /* SettingsViewController.swift in Sources */,
 				2712F83B1FFED62F00AE9DA0 /* UnitType.swift in Sources */,
