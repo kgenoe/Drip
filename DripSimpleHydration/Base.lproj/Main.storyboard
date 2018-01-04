@@ -88,7 +88,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JUJ-cb-HdS" userLabel="Bottom View">
                                 <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9S7-mO-Ey2">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9S7-mO-Ey2" customClass="UIBorderedButton" customModule="DripSimpleHydration" customModuleProvider="target">
                                         <rect key="frame" x="25" y="29" width="325" height="125"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="125" id="VxQ-Eo-AdL"/>
@@ -102,7 +102,7 @@
                                             <action selector="mainButtonPressed" destination="MlE-0p-rCO" eventType="touchUpInside" id="xla-J8-yKR"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0tF-j8-iE8">
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0tF-j8-iE8" customClass="UIBorderedButton" customModule="DripSimpleHydration" customModuleProvider="target">
                                         <rect key="frame" x="200" y="179" width="150" height="125"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="125" id="H8S-nT-5wl"/>
@@ -115,7 +115,7 @@
                                             <action selector="rightButtonPressed" destination="MlE-0p-rCO" eventType="touchUpInside" id="eWF-6p-dr5"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BwG-5i-haA">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BwG-5i-haA" customClass="UIBorderedButton" customModule="DripSimpleHydration" customModuleProvider="target">
                                         <rect key="frame" x="25" y="179" width="150" height="125"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="125" id="mNa-pd-wa2"/>

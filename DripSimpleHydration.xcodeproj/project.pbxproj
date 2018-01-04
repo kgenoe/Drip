@@ -18,6 +18,7 @@
 		2712F8401FFED6E300AE9DA0 /* SharedUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F83F1FFED6E300AE9DA0 /* SharedUserDefaults.swift */; };
 		2712F8421FFED76F00AE9DA0 /* InitialDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F8411FFED76F00AE9DA0 /* InitialDefaults.swift */; };
 		2712F8441FFED90E00AE9DA0 /* UIBorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F8431FFED90E00AE9DA0 /* UIBorderedButton.swift */; };
+		2712F8461FFED99300AE9DA0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2712F8451FFED99300AE9DA0 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		2712F83F1FFED6E300AE9DA0 /* SharedUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedUserDefaults.swift; sourceTree = "<group>"; };
 		2712F8411FFED76F00AE9DA0 /* InitialDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialDefaults.swift; sourceTree = "<group>"; };
 		2712F8431FFED90E00AE9DA0 /* UIBorderedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBorderedButton.swift; sourceTree = "<group>"; };
+		2712F8451FFED99300AE9DA0 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2712F8461FFED99300AE9DA0 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +89,7 @@
 		2712F8321FFED51C00AE9DA0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2712F8451FFED99300AE9DA0 /* HealthKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -143,6 +147,9 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.HealthKit = {
 								enabled = 1;
 							};
 							com.apple.InAppPurchase = {
