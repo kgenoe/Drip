@@ -35,6 +35,9 @@
 		2712F8681FFEEDBD00AE9DA0 /* UIBorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F8431FFED90E00AE9DA0 /* UIBorderedButton.swift */; };
 		2712F8691FFEEDC000AE9DA0 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F84B1FFEDD2900AE9DA0 /* ColorPalette.swift */; };
 		2712F86B1FFEEE9300AE9DA0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2712F8451FFED99300AE9DA0 /* HealthKit.framework */; };
+		2712F86D1FFEF3E200AE9DA0 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2712F86C1FFEF3E200AE9DA0 /* StoreKit.framework */; };
+		2712F86F1FFF0AB100AE9DA0 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F86E1FFF0AB100AE9DA0 /* IAPHelper.swift */; };
+		272B913B200AB398002449D5 /* DonationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272B913A200AB398002449D5 /* DonationsViewController.swift */; };
 		7910C7CEB19E4BC2B19259F8 /* Pods_DripSimpleHydration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE5F8C685889C52B36F1A323 /* Pods_DripSimpleHydration.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +90,9 @@
 		2712F8581FFEDF1C00AE9DA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		2712F85A1FFEDF1C00AE9DA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2712F86A1FFEEE8600AE9DA0 /* TodayWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TodayWidget.entitlements; sourceTree = "<group>"; };
+		2712F86C1FFEF3E200AE9DA0 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		2712F86E1FFF0AB100AE9DA0 /* IAPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
+		272B913A200AB398002449D5 /* DonationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationsViewController.swift; sourceTree = "<group>"; };
 		528A1F0FE088460DAADA90D9 /* Pods-DripSimpleHydration.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DripSimpleHydration.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DripSimpleHydration/Pods-DripSimpleHydration.debug.xcconfig"; sourceTree = "<group>"; };
 		F555FB150D2F156823634388 /* Pods-DripSimpleHydration.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DripSimpleHydration.release.xcconfig"; path = "Pods/Target Support Files/Pods-DripSimpleHydration/Pods-DripSimpleHydration.release.xcconfig"; sourceTree = "<group>"; };
 		FE5F8C685889C52B36F1A323 /* Pods_DripSimpleHydration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DripSimpleHydration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2712F86D1FFEF3E200AE9DA0 /* StoreKit.framework in Frameworks */,
 				2712F8461FFED99300AE9DA0 /* HealthKit.framework in Frameworks */,
 				7910C7CEB19E4BC2B19259F8 /* Pods_DripSimpleHydration.framework in Frameworks */,
 			);
@@ -142,11 +149,13 @@
 				2712F8391FFED62300AE9DA0 /* Model */,
 				2712F8351FFED56200AE9DA0 /* MainViewController.swift */,
 				2712F8371FFED5E500AE9DA0 /* SettingsViewController.swift */,
+				272B913A200AB398002449D5 /* DonationsViewController.swift */,
 				2712F8431FFED90E00AE9DA0 /* UIBorderedButton.swift */,
 				2712F84B1FFEDD2900AE9DA0 /* ColorPalette.swift */,
 				2712F83C1FFED68400AE9DA0 /* Helpers */,
-				2712F8231FFED34400AE9DA0 /* Main.storyboard */,
+				272B9139200AB1FD002449D5 /* User Defaults */,
 				2712F8261FFED34400AE9DA0 /* Assets.xcassets */,
+				2712F8231FFED34400AE9DA0 /* Main.storyboard */,
 				2712F8281FFED34400AE9DA0 /* LaunchScreen.storyboard */,
 				2712F82B1FFED34400AE9DA0 /* Info.plist */,
 			);
@@ -156,6 +165,7 @@
 		2712F8321FFED51C00AE9DA0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2712F86C1FFEF3E200AE9DA0 /* StoreKit.framework */,
 				2712F8451FFED99300AE9DA0 /* HealthKit.framework */,
 				FE5F8C685889C52B36F1A323 /* Pods_DripSimpleHydration.framework */,
 				2712F8521FFEDF1C00AE9DA0 /* NotificationCenter.framework */,
@@ -174,10 +184,8 @@
 		2712F83C1FFED68400AE9DA0 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				2712F83D1FFED6A200AE9DA0 /* DefaultsKey.swift */,
-				2712F83F1FFED6E300AE9DA0 /* SharedUserDefaults.swift */,
-				2712F8411FFED76F00AE9DA0 /* InitialDefaults.swift */,
 				2712F8471FFED9B000AE9DA0 /* HealthKitManager.swift */,
+				2712F86E1FFF0AB100AE9DA0 /* IAPHelper.swift */,
 				2712F8491FFEDB7500AE9DA0 /* Utilities.swift */,
 			);
 			path = Helpers;
@@ -192,6 +200,16 @@
 				2712F85A1FFEDF1C00AE9DA0 /* Info.plist */,
 			);
 			path = TodayWidget;
+			sourceTree = "<group>";
+		};
+		272B9139200AB1FD002449D5 /* User Defaults */ = {
+			isa = PBXGroup;
+			children = (
+				2712F83D1FFED6A200AE9DA0 /* DefaultsKey.swift */,
+				2712F83F1FFED6E300AE9DA0 /* SharedUserDefaults.swift */,
+				2712F8411FFED76F00AE9DA0 /* InitialDefaults.swift */,
+			);
+			path = "User Defaults";
 			sourceTree = "<group>";
 		};
 		951D52ECE5805B5F320D3934 /* Pods */ = {
@@ -266,7 +284,7 @@
 								enabled = 1;
 							};
 							com.apple.InAppPurchase = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -384,9 +402,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2712F8201FFED34400AE9DA0 /* AppDelegate.swift in Sources */,
+				272B913B200AB398002449D5 /* DonationsViewController.swift in Sources */,
 				2712F8401FFED6E300AE9DA0 /* SharedUserDefaults.swift in Sources */,
 				2712F8441FFED90E00AE9DA0 /* UIBorderedButton.swift in Sources */,
 				2712F8421FFED76F00AE9DA0 /* InitialDefaults.swift in Sources */,
+				2712F86F1FFF0AB100AE9DA0 /* IAPHelper.swift in Sources */,
 				2712F8361FFED56200AE9DA0 /* MainViewController.swift in Sources */,
 				2712F8381FFED5E500AE9DA0 /* SettingsViewController.swift in Sources */,
 				2712F83B1FFED62F00AE9DA0 /* UnitType.swift in Sources */,

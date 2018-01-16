@@ -7,11 +7,17 @@
 //
 
 import UIKit
+import YXWaveView
+import StoreKit
 
 class SettingsViewController: UIViewController {
     
     
     //MARK: - Properties
+    
+    fileprivate var waveView: YXWaveView?
+    
+    @IBOutlet weak var waveContainer: UIView!
     
     @IBOutlet weak var unitSegmentedControl: UISegmentedControl!
     
@@ -41,7 +47,16 @@ class SettingsViewController: UIViewController {
         // tap background to hide keyboard
         let backgroundTap = UITapGestureRecognizer(target: self, action: #selector(backgroundPressed))
         self.view.addGestureRecognizer(backgroundTap)
+        
+        // start wave animation
+        waveView = YXWaveView(frame: waveContainer.bounds,
+                              color: ColorPalette.blue.color())
+        waveView?.waveHeight = 10
+        waveContainer.addSubview(waveView!)
+        waveView?.start()
     }
+    
+
     
     func refreshTextFields() {
         let unitTypeString = UserDefaults.shared.string(forKey: DefaultsKey.unitType)!
