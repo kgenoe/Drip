@@ -50,12 +50,6 @@ class SettingsViewController: UIViewController {
         let backgroundTap = UITapGestureRecognizer(target: self, action: #selector(backgroundPressed))
         self.view.addGestureRecognizer(backgroundTap)
         
-        // start wave animation
-        waveView = YXWaveView(frame: waveContainer.bounds,
-                              color: ColorPalette.blue.color())
-        waveView?.waveHeight = 10
-        waveContainer.addSubview(waveView!)
-        waveView?.start()
         
         var attributes = [NSAttributedStringKey: Any]()
         attributes[.font] = UIFont(name: "Avenir Book", size: 17.0)
@@ -66,9 +60,25 @@ class SettingsViewController: UIViewController {
         donationTextView.attributedText = donationString
         
         let donationTap = UITapGestureRecognizer(target: self, action: #selector(donationTextViewTapped))
-        self.view.addGestureRecognizer(donationTap)
+        donationTextView.addGestureRecognizer(donationTap)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // start wave animation
+        waveView = YXWaveView(frame: waveContainer.bounds,
+                              color: ColorPalette.blue.color())
+        waveView?.waveHeight = 10
+        waveContainer.addSubview(waveView!)
+        waveView?.start()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        waveView?.stop()
+        waveView = nil
+    }
 
     
     func refreshTextFields() {

@@ -42,12 +42,6 @@ class MainViewController: UIViewController {
         HealthKitManager.shared.requestAuthorization({ (finished, error) in
         })
         
-        // start wave animation
-        waveView = YXWaveView(frame: waveContainer.bounds,
-                              color: ColorPalette.blue.color())
-        waveView?.waveHeight = 10
-        waveContainer.addSubview(waveView!)
-        waveView?.start()
     }
     
     
@@ -67,6 +61,23 @@ class MainViewController: UIViewController {
         mainDrinkButton.setTitle("+\(mainSize) \(unitType.toUnitString())", for: [])
         
         self.refreshTodaysDrinkCount()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // start wave animation
+        waveView = YXWaveView(frame: waveContainer.bounds,
+                              color: ColorPalette.blue.color())
+        waveView?.waveHeight = 10
+        waveContainer.addSubview(waveView!)
+        waveView?.start()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        waveView?.stop()
+        waveView = nil
     }
     
     
