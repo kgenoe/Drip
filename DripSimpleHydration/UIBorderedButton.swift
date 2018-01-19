@@ -9,10 +9,13 @@
 import UIKit
 
 class UIBorderedButton: UIButton {
+    
+    var borderColor: UIColor = UIColor.white
+    
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         layer.cornerRadius = 5
-        layer.borderColor = UIColor.white.cgColor
+        layer.borderColor = borderColor.cgColor
         layer.borderWidth = 2.0
         layer.masksToBounds = true
     }
