@@ -27,6 +27,8 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var rightTextField: UITextField!
     
+    @IBOutlet weak var donationTextView: UITextView!
+    
     
     
     //MARK: - Life Cycle
@@ -54,6 +56,17 @@ class SettingsViewController: UIViewController {
         waveView?.waveHeight = 10
         waveContainer.addSubview(waveView!)
         waveView?.start()
+        
+        var attributes = [NSAttributedStringKey: Any]()
+        attributes[.font] = UIFont(name: "Avenir Book", size: 17.0)
+        attributes[.foregroundColor] = UIColor.white
+        let donationString = NSMutableAttributedString(string: "If you like Drip, consider donating to fund further development.", attributes: attributes)
+        let underlineRange = NSRange(location: 27, length: 8)
+        donationString.addAttribute(.underlineStyle, value: NSUnderlineStyle.styleSingle.rawValue, range: underlineRange)
+        donationTextView.attributedText = donationString
+        
+        let donationTap = UITapGestureRecognizer(target: self, action: #selector(donationTextViewTapped))
+        self.view.addGestureRecognizer(donationTap)
     }
     
 
@@ -122,6 +135,11 @@ class SettingsViewController: UIViewController {
         let unitType = UnitType(rawValue: unitTypeString)!
         UserDefaults.shared.set(value, forKey: DefaultsKey.rightKey(for: unitType))
     }
+    
+    @objc func donationTextViewTapped() {
+        let vc = DonationsViewController.instantiate()
+        present(vc, animated: true, completion: nil)
+    }
 }
 
 
@@ -132,4 +150,10 @@ extension SettingsViewController: UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+}
+
+
+
+extension SettingsViewController: UITextViewDelegate {
+    
 }
