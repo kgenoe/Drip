@@ -9,6 +9,7 @@
 import UIKit
 import StoreKit
 import MessageUI
+import SafariServices
 
 class DonationsViewController: UIViewController {
 
@@ -94,7 +95,9 @@ class DonationsViewController: UIViewController {
     }
    
     @IBAction func tweetButtonPressed() {
-        print("Tweet button pressed")
+        let twitterURL = URL(string: "https://twitter.com/kylegenoe")!
+        let safariVC = SFSafariViewController(url: twitterURL)
+        present(safariVC, animated: true, completion: nil)
     }
     
     @IBAction func emailButtonPressed() {
