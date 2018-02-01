@@ -33,6 +33,8 @@ struct InitialDefaults {
             UserDefaults.shared.set(8.0, forKey: DefaultsKey.leftKey(for: .Ounces))
             UserDefaults.shared.set(16.0, forKey: DefaultsKey.rightKey(for: .Ounces))
             UserDefaults.shared.set(12.0, forKey: DefaultsKey.mainKey(for: .Ounces))
+            
+            UserDefaults.shared.set(0.0, forKey: DefaultsKey.mostRecentWater)
         }
     }
 }

@@ -32,6 +32,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         // set global unit type
         let unitTypeString = UserDefaults.shared.string(forKey: DefaultsKey.unitType)!
@@ -44,16 +45,24 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         leftDrinkButton.setTitle("+\(leftSize) \(unitType.toUnitString())", for: [])
         rightDrinkButton.setTitle("+\(rightSize) \(unitType.toUnitString())", for: [])
         mainDrinkButton.setTitle("+\(mainSize) \(unitType.toUnitString())", for: [])
-        
-        //self.refreshTodaysDrinkCount()
     }
     
     
     
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//
+//        HealthKitManager.shared.getDietaryWater(on: Date()) { quantity in
+//            let unitTypeString = UserDefaults.shared.string(forKey: DefaultsKey.unitType)!
+//            let unitType = UnitType(rawValue: unitTypeString)!
+//            let hkUnit = unitType.associatedHKUnit()
+//            guard let displayValue = quantity?.doubleValue(for: hkUnit).rounded(toPlaces: 1) else { return }
+//            UserDefaults.shared.set(displayValue, forKey: DefaultsKey.mostRecentWater)
+//        }
+//    }
     
     
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
-        print("Widget perform update!")
         refreshTodaysDrinkCount()
         completionHandler(NCUpdateResult.noData)
     }
@@ -74,13 +83,18 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                 let unitTypeString = UserDefaults.shared.string(forKey: DefaultsKey.unitType)!
                 let unitType = UnitType(rawValue: unitTypeString)!
                 let hkUnit = unitType.associatedHKUnit()
-                if let displayValue = quantity?.doubleValue(for: hkUnit).rounded(toPlaces: 1) {
-                    self.drankTodayValueLabel.text = "\(displayValue) \(unitType.toUnitString())"
-                } else {
-                    self.drankTodayValueLabel.text = "Unlock to view."
-                }
+                let displayValue = quantity?.doubleValue(for: hkUnit).rounded(toPlaces: 1) ?? UserDefaults.shared.double(forKey: DefaultsKey.mostRecentWater)
+
+                self.drankTodayValueLabel.text = "\(displayValue) \(unitType.toUnitString())"
             }
         }
+    }
+    
+    // Updates mostRecentWater in UserDefaults, used to display water consumed, in the widget when the phone is locked
+    private func updateMostRecentWater(_ added: Double) {
+        let current = UserDefaults.shared.double(forKey: DefaultsKey.mostRecentWater)
+        let updatedMostRecentWater = current+added
+        UserDefaults.shared.set(updatedMostRecentWater, forKey: DefaultsKey.mostRecentWater)
     }
     
     
@@ -89,6 +103,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         let unitTypeString = UserDefaults.shared.string(forKey: DefaultsKey.unitType)!
         let unitType = UnitType(rawValue: unitTypeString)!
         let value = UserDefaults.shared.double(forKey: DefaultsKey.leftKey(for: unitType))
+        updateMostRecentWater(value)
         let quantity = HKQuantity(unit: unitType.associatedHKUnit(), doubleValue: value)
         HealthKitManager.shared.saveDietaryWater(quantity: quantity) {
             self.refreshTodaysDrinkCount()
@@ -100,6 +115,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         let unitTypeString = UserDefaults.shared.string(forKey: DefaultsKey.unitType)!
         let unitType = UnitType(rawValue: unitTypeString)!
         let value = UserDefaults.shared.double(forKey: DefaultsKey.rightKey(for: unitType))
+        updateMostRecentWater(value)
         let quantity = HKQuantity(unit: unitType.associatedHKUnit(), doubleValue: value)
         HealthKitManager.shared.saveDietaryWater(quantity: quantity) {
             self.refreshTodaysDrinkCount()
@@ -110,6 +126,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         let unitTypeString = UserDefaults.shared.string(forKey: DefaultsKey.unitType)!
         let unitType = UnitType(rawValue: unitTypeString)!
         let value = UserDefaults.shared.double(forKey: DefaultsKey.mainKey(for: unitType))
+        updateMostRecentWater(value)
         let quantity = HKQuantity(unit: unitType.associatedHKUnit(), doubleValue: value)
         HealthKitManager.shared.saveDietaryWater(quantity: quantity) {
             self.refreshTodaysDrinkCount()

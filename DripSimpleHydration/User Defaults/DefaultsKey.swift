@@ -35,4 +35,6 @@ struct DefaultsKey {
         case .Ounces: return "rightOuncesKey"
         }
     }
+    
+    static var mostRecentWater: String = "mostRecentWater"
 }
