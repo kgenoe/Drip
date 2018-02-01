@@ -88,8 +88,7 @@ class MainViewController: UIViewController {
                 let unitTypeString = UserDefaults.shared.string(forKey: DefaultsKey.unitType)!
                 let unitType = UnitType(rawValue: unitTypeString)!
                 let hkUnit = unitType.associatedHKUnit()
-                let displayValue = quantity?.doubleValue(for: hkUnit).rounded(toPlaces: 1)
-                UserDefaults.shared.set(displayValue, forKey: DefaultsKey.mostRecentHKValue)
+                let displayValue = quantity?.doubleValue(for: hkUnit).rounded(toPlaces: 1) ?? 0.0
                 self.drankTodayValueLabel.text = "\(displayValue) \(unitType.toUnitString())"
             }
         }

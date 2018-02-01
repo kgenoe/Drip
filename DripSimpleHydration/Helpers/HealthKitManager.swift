@@ -57,9 +57,12 @@ class HealthKitManager: NSObject {
             
             guard let result = result else { completionHandler(nil); return  }
             
-            if let sum = result.sumQuantity() {
-                completionHandler(sum)
+            guard let sum = result.sumQuantity() else {
+                completionHandler(HKQuantity(unit: HKUnit.liter(), doubleValue: 0.0))
+                return
             }
+            
+            completionHandler(sum)
         }
         
         self.store.execute(query)

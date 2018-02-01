@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -29,7 +28,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="348.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGe-NH-n3P">
-                                        <rect key="frame" x="8" y="122" width="359" height="30"/>
+                                        <rect key="frame" x="8" y="122.5" width="359" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="fmo-gy-uKP"/>
                                         </constraints>
@@ -38,7 +37,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOu-B8-OR1">
-                                        <rect key="frame" x="8" y="167" width="359" height="50"/>
+                                        <rect key="frame" x="8" y="167.5" width="359" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Npa-O4-gns"/>
                                         </constraints>
@@ -79,10 +78,7 @@
                                 <rect key="frame" x="0.0" y="348.5" width="375" height="318.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9S7-mO-Ey2" customClass="UIBorderedButton" customModule="DripSimpleHydration" customModuleProvider="target">
-                                        <rect key="frame" x="25" y="21.5" width="325" height="125"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="125" id="VxQ-Eo-AdL"/>
-                                        </constraints>
+                                        <rect key="frame" x="25" y="22" width="325" height="124"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                         <state key="normal" title="+2 Cups">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -92,10 +88,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0tF-j8-iE8" customClass="UIBorderedButton" customModule="DripSimpleHydration" customModuleProvider="target">
-                                        <rect key="frame" x="200" y="171.5" width="150" height="125"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="125" id="H8S-nT-5wl"/>
-                                        </constraints>
+                                        <rect key="frame" x="200" y="171" width="150" height="126"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                         <state key="normal" title="+1 Cup">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -105,10 +98,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BwG-5i-haA" customClass="UIBorderedButton" customModule="DripSimpleHydration" customModuleProvider="target">
-                                        <rect key="frame" x="25" y="171.5" width="150" height="125"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="125" id="mNa-pd-wa2"/>
-                                        </constraints>
+                                        <rect key="frame" x="25" y="171" width="150" height="126"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                         <state key="normal" title="+0.5 Cups">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -120,14 +110,19 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.3294117647" green="0.42352941179999998" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
+                                    <constraint firstItem="0tF-j8-iE8" firstAttribute="height" relation="lessThanOrEqual" secondItem="9S7-mO-Ey2" secondAttribute="height" priority="750" id="5E9-6R-jdL"/>
                                     <constraint firstItem="BwG-5i-haA" firstAttribute="top" secondItem="9S7-mO-Ey2" secondAttribute="bottom" constant="25" id="8vY-cH-dz3"/>
+                                    <constraint firstItem="9S7-mO-Ey2" firstAttribute="top" secondItem="JUJ-cb-HdS" secondAttribute="top" constant="22" id="Eqk-o4-HPY"/>
                                     <constraint firstItem="9S7-mO-Ey2" firstAttribute="centerY" secondItem="JUJ-cb-HdS" secondAttribute="centerY" constant="-75.25" id="JCc-Eu-La2"/>
+                                    <constraint firstAttribute="bottom" secondItem="0tF-j8-iE8" secondAttribute="bottom" constant="21.5" id="JRz-6H-cxL"/>
+                                    <constraint firstItem="BwG-5i-haA" firstAttribute="height" relation="lessThanOrEqual" secondItem="9S7-mO-Ey2" secondAttribute="height" priority="750" id="LpV-Mw-HVK"/>
                                     <constraint firstAttribute="trailing" secondItem="9S7-mO-Ey2" secondAttribute="trailing" constant="25" id="M7A-Lc-dhr"/>
                                     <constraint firstAttribute="trailing" secondItem="0tF-j8-iE8" secondAttribute="trailing" constant="25" id="NRl-I6-9Sr"/>
                                     <constraint firstItem="BwG-5i-haA" firstAttribute="leading" secondItem="JUJ-cb-HdS" secondAttribute="leading" constant="25" id="RCM-QQ-FnF"/>
+                                    <constraint firstItem="0tF-j8-iE8" firstAttribute="top" secondItem="9S7-mO-Ey2" secondAttribute="bottom" constant="25" id="SZV-db-Dn7"/>
                                     <constraint firstItem="9S7-mO-Ey2" firstAttribute="leading" secondItem="JUJ-cb-HdS" secondAttribute="leading" constant="25" id="WWr-w8-J59"/>
                                     <constraint firstItem="0tF-j8-iE8" firstAttribute="width" secondItem="BwG-5i-haA" secondAttribute="width" id="ab4-tR-aGZ"/>
-                                    <constraint firstItem="0tF-j8-iE8" firstAttribute="top" secondItem="9S7-mO-Ey2" secondAttribute="bottom" constant="25" id="e0M-YJ-I0c"/>
+                                    <constraint firstAttribute="bottom" secondItem="BwG-5i-haA" secondAttribute="bottom" constant="21.5" id="jhe-Jt-rPR"/>
                                     <constraint firstItem="9S7-mO-Ey2" firstAttribute="centerX" secondItem="JUJ-cb-HdS" secondAttribute="centerX" id="kuF-AM-dVU"/>
                                     <constraint firstItem="0tF-j8-iE8" firstAttribute="leading" secondItem="BwG-5i-haA" secondAttribute="trailing" constant="25" id="ptb-nY-CLK"/>
                                 </constraints>
@@ -223,7 +218,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Customize Units" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yF8-ob-EMd">
-                                        <rect key="frame" x="17" y="50" width="122.5" height="21"/>
+                                        <rect key="frame" x="17" y="35" width="122.5" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="0zc-Gr-Tiy"/>
                                             <constraint firstAttribute="width" constant="122.5" id="J2g-yf-hSp"/>
@@ -233,7 +228,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dDh-5C-Azi">
-                                        <rect key="frame" x="17" y="86" width="341" height="29"/>
+                                        <rect key="frame" x="17" y="71" width="341" height="29"/>
                                         <segments>
                                             <segment title="Cups"/>
                                             <segment title="Metric"/>
@@ -369,7 +364,7 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Sgd-Dy-H6f" secondAttribute="trailing" id="60t-C2-H2k"/>
                             <constraint firstItem="rvv-SW-PtE" firstAttribute="top" secondItem="cfv-9U-bN4" secondAttribute="bottom" id="A8L-AI-30D"/>
-                            <constraint firstItem="yF8-ob-EMd" firstAttribute="top" secondItem="pkS-0s-NVR" secondAttribute="top" constant="30" id="LKd-Kb-l9w"/>
+                            <constraint firstItem="yF8-ob-EMd" firstAttribute="top" secondItem="pkS-0s-NVR" secondAttribute="top" constant="15" id="LKd-Kb-l9w"/>
                             <constraint firstItem="cfv-9U-bN4" firstAttribute="top" secondItem="GzT-X0-NOG" secondAttribute="top" id="PXx-Ud-tEN"/>
                             <constraint firstItem="pkS-0s-NVR" firstAttribute="bottom" secondItem="rvv-SW-PtE" secondAttribute="bottom" id="SXl-fq-JrP"/>
                             <constraint firstItem="rvv-SW-PtE" firstAttribute="leading" secondItem="pkS-0s-NVR" secondAttribute="leading" id="UgO-ct-VwK"/>
@@ -498,7 +493,7 @@
                                     <constraint firstAttribute="height" constant="45" id="9ru-jl-5Fj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <state key="normal" title="Tweet @kylegenoe">
+                                <state key="normal" title="Tweet">
                                     <color key="titleColor" red="0.32691705226898193" green="0.42467555403709412" blue="0.96480309963226318" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
@@ -511,7 +506,7 @@
                                     <constraint firstAttribute="height" constant="45" id="izk-QB-HaR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <state key="normal" title="Email support">
+                                <state key="normal" title="Email">
                                     <color key="titleColor" red="0.32691705230000001" green="0.42467555400000001" blue="0.96480309959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
