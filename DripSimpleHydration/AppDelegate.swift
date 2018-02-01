@@ -22,6 +22,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    // Case: View is still in memory but water has been updated from Today widget. ViewWillAppear won't be called because view is still in memory but label needs updating.
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        if let main = application.windows.first?.rootViewController as? MainViewController {
+            main.refreshTodaysDrinkCount()
+        }
+    }
+    
+    
     func applicationDidEnterBackground(_ application: UIApplication) {
         HealthKitManager.shared.getDietaryWater(on: Date()) { quantity in
             let unitTypeString = UserDefaults.shared.string(forKey: DefaultsKey.unitType)!

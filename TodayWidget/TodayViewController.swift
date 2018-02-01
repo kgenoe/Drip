@@ -34,9 +34,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        // set global unit type
+        // set unit type
         let unitTypeString = UserDefaults.shared.string(forKey: DefaultsKey.unitType)!
-        let unitType = UnitType(rawValue: unitTypeString)!
+        let unitType = UnitType(string: unitTypeString)!
         
         // style buttons for unit type & preferences
         let leftSize = UserDefaults.shared.double(forKey: DefaultsKey.leftKey(for: unitType))
@@ -79,12 +79,11 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     func refreshTodaysDrinkCount() {
         HealthKitManager.shared.getDietaryWater(on: Date()) { quantity in
+            let unitTypeString = UserDefaults.shared.string(forKey: DefaultsKey.unitType)!
+            let unitType = UnitType(rawValue: unitTypeString)!
+            let hkUnit = unitType.associatedHKUnit()
+            let displayValue = quantity?.doubleValue(for: hkUnit).rounded(toPlaces: 1) ?? UserDefaults.shared.double(forKey: DefaultsKey.mostRecentWater)
             DispatchQueue.main.async {
-                let unitTypeString = UserDefaults.shared.string(forKey: DefaultsKey.unitType)!
-                let unitType = UnitType(rawValue: unitTypeString)!
-                let hkUnit = unitType.associatedHKUnit()
-                let displayValue = quantity?.doubleValue(for: hkUnit).rounded(toPlaces: 1) ?? UserDefaults.shared.double(forKey: DefaultsKey.mostRecentWater)
-
                 self.drankTodayValueLabel.text = "\(displayValue) \(unitType.toUnitString())"
             }
         }
@@ -101,7 +100,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     //MARK: - UI Actions
     @IBAction func leftButtonPressed() {
         let unitTypeString = UserDefaults.shared.string(forKey: DefaultsKey.unitType)!
-        let unitType = UnitType(rawValue: unitTypeString)!
+        let unitType = UnitType(string: unitTypeString)!
         let value = UserDefaults.shared.double(forKey: DefaultsKey.leftKey(for: unitType))
         updateMostRecentWater(value)
         let quantity = HKQuantity(unit: unitType.associatedHKUnit(), doubleValue: value)
@@ -113,7 +112,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     @IBAction func rightButtonPressed() {
         let unitTypeString = UserDefaults.shared.string(forKey: DefaultsKey.unitType)!
-        let unitType = UnitType(rawValue: unitTypeString)!
+        let unitType = UnitType(string: unitTypeString)!
         let value = UserDefaults.shared.double(forKey: DefaultsKey.rightKey(for: unitType))
         updateMostRecentWater(value)
         let quantity = HKQuantity(unit: unitType.associatedHKUnit(), doubleValue: value)
@@ -124,7 +123,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     @IBAction func mainButtonPressed() {
         let unitTypeString = UserDefaults.shared.string(forKey: DefaultsKey.unitType)!
-        let unitType = UnitType(rawValue: unitTypeString)!
+        let unitType = UnitType(string: unitTypeString)!
         let value = UserDefaults.shared.double(forKey: DefaultsKey.mainKey(for: unitType))
         updateMostRecentWater(value)
         let quantity = HKQuantity(unit: unitType.associatedHKUnit(), doubleValue: value)

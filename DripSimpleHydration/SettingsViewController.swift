@@ -107,7 +107,7 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func unitsDidChange(_ sender: UISegmentedControl) {
-        guard let newUnitType = UnitType.fromInt(sender.selectedSegmentIndex) else {
+        guard let newUnitType = UnitType(int: sender.selectedSegmentIndex) else {
             return
         }
         

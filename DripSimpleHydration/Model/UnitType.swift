@@ -14,12 +14,22 @@ enum UnitType: String {
     case Cups
     case Ounces
     
+    init?(string: String) {
+        switch string {
+        case "Metric": self = .Metric
+        case "Cups": self = .Cups
+        case "Ounces": self = .Ounces
+        default: return nil
+        }
+    }
     
-    static func fromInt(_ value: Int) -> UnitType? {
-        if value == 0 { return .Cups }
-        else if value == 1 { return .Metric }
-        else if value == 2 { return .Ounces }
-        else { return nil }
+    init?(int: Int) {
+        switch int {
+        case 0: self = .Cups
+        case 1: self = .Metric
+        case 2: self = .Ounces
+        default: return nil
+        }
     }
     
     func toInt() -> Int {
