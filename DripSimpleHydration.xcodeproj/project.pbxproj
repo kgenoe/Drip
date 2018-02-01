@@ -21,7 +21,6 @@
 		2712F8461FFED99300AE9DA0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2712F8451FFED99300AE9DA0 /* HealthKit.framework */; };
 		2712F8481FFED9B000AE9DA0 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F8471FFED9B000AE9DA0 /* HealthKitManager.swift */; };
 		2712F84A1FFEDB7500AE9DA0 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F8491FFEDB7500AE9DA0 /* Utilities.swift */; };
-		2712F84C1FFEDD2900AE9DA0 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F84B1FFEDD2900AE9DA0 /* ColorPalette.swift */; };
 		2712F8531FFEDF1C00AE9DA0 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2712F8521FFEDF1C00AE9DA0 /* NotificationCenter.framework */; };
 		2712F8561FFEDF1C00AE9DA0 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F8551FFEDF1C00AE9DA0 /* TodayViewController.swift */; };
 		2712F8591FFEDF1C00AE9DA0 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2712F8571FFEDF1C00AE9DA0 /* MainInterface.storyboard */; };
@@ -33,7 +32,6 @@
 		2712F8661FFEED5D00AE9DA0 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F8491FFEDB7500AE9DA0 /* Utilities.swift */; };
 		2712F8671FFEEDA300AE9DA0 /* UnitType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F83A1FFED62F00AE9DA0 /* UnitType.swift */; };
 		2712F8681FFEEDBD00AE9DA0 /* UIBorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F8431FFED90E00AE9DA0 /* UIBorderedButton.swift */; };
-		2712F8691FFEEDC000AE9DA0 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F84B1FFEDD2900AE9DA0 /* ColorPalette.swift */; };
 		2712F86B1FFEEE9300AE9DA0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2712F8451FFED99300AE9DA0 /* HealthKit.framework */; };
 		2712F86D1FFEF3E200AE9DA0 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2712F86C1FFEF3E200AE9DA0 /* StoreKit.framework */; };
 		2712F86F1FFF0AB100AE9DA0 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712F86E1FFF0AB100AE9DA0 /* IAPHelper.swift */; };
@@ -83,7 +81,6 @@
 		2712F8451FFED99300AE9DA0 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		2712F8471FFED9B000AE9DA0 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 		2712F8491FFEDB7500AE9DA0 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		2712F84B1FFEDD2900AE9DA0 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = SOURCE_ROOT; };
 		2712F8511FFEDF1C00AE9DA0 /* TodayWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TodayWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		2712F8521FFEDF1C00AE9DA0 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		2712F8551FFEDF1C00AE9DA0 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -151,7 +148,6 @@
 				2712F8371FFED5E500AE9DA0 /* SettingsViewController.swift */,
 				272B913A200AB398002449D5 /* DonationsViewController.swift */,
 				2712F8431FFED90E00AE9DA0 /* UIBorderedButton.swift */,
-				2712F84B1FFEDD2900AE9DA0 /* ColorPalette.swift */,
 				2712F83C1FFED68400AE9DA0 /* Helpers */,
 				272B9139200AB1FD002449D5 /* User Defaults */,
 				2712F8261FFED34400AE9DA0 /* Assets.xcassets */,
@@ -413,7 +409,6 @@
 				2712F83E1FFED6A200AE9DA0 /* DefaultsKey.swift in Sources */,
 				2712F84A1FFEDB7500AE9DA0 /* Utilities.swift in Sources */,
 				2712F8481FFED9B000AE9DA0 /* HealthKitManager.swift in Sources */,
-				2712F84C1FFEDD2900AE9DA0 /* ColorPalette.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,7 +418,6 @@
 			files = (
 				2712F8661FFEED5D00AE9DA0 /* Utilities.swift in Sources */,
 				2712F8561FFEDF1C00AE9DA0 /* TodayViewController.swift in Sources */,
-				2712F8691FFEEDC000AE9DA0 /* ColorPalette.swift in Sources */,
 				2712F8681FFEEDBD00AE9DA0 /* UIBorderedButton.swift in Sources */,
 				2712F8671FFEEDA300AE9DA0 /* UnitType.swift in Sources */,
 				2712F8631FFEED5D00AE9DA0 /* SharedUserDefaults.swift in Sources */,

@@ -31,12 +31,12 @@ class DonationsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tip1Button.borderColor = ColorPalette.blue.color()
-        tip2Button.borderColor = ColorPalette.blue.color()
-        tip3Button.borderColor = ColorPalette.blue.color()
-        restorePurchasesButton.borderColor = ColorPalette.blue.color()
-        tweetButton.borderColor = ColorPalette.blue.color()
-        emailButton.borderColor = ColorPalette.blue.color()
+        tip1Button.borderColor = UIColor(named: "DripBlue")!
+        tip2Button.borderColor = UIColor(named: "DripBlue")!
+        tip3Button.borderColor = UIColor(named: "DripBlue")!
+        restorePurchasesButton.borderColor = UIColor(named: "DripBlue")!
+        tweetButton.borderColor = UIColor(named: "DripBlue")!
+        emailButton.borderColor = UIColor(named: "DripBlue")!
 
         fetchAvailableProducts()
     }

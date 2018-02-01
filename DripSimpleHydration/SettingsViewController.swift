@@ -68,7 +68,7 @@ class SettingsViewController: UIViewController {
         
         // start wave animation
         waveView = YXWaveView(frame: waveContainer.bounds,
-                              color: ColorPalette.blue.color())
+                              color: UIColor(named: "DripBlue")!)
         waveView?.waveHeight = 10
         waveContainer.addSubview(waveView!)
         waveView?.start()
