@@ -24,6 +24,11 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     override func viewDidLoad() {
         super.viewDidLoad()
         extensionContext?.widgetLargestAvailableDisplayMode = .expanded
+        
+        // request authroizaiton for extension
+        HealthKitManager.shared.requestAuthorization({ (finished, error) in
+            print("something")
+        })
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,7 +45,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         rightDrinkButton.setTitle("+\(rightSize) \(unitType.toUnitString())", for: [])
         mainDrinkButton.setTitle("+\(mainSize) \(unitType.toUnitString())", for: [])
         
-        self.refreshTodaysDrinkCount()
+        //self.refreshTodaysDrinkCount()
     }
     
     
@@ -48,10 +53,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
-        // Perform any setup necessary in order to update the view.
-        
+        print("Widget perform update!")
         refreshTodaysDrinkCount()
-        completionHandler(NCUpdateResult.newData)
+        completionHandler(NCUpdateResult.noData)
     }
     
     // Set min/max display sizes

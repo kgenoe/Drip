@@ -19,7 +19,7 @@
         <!--Today View Controller-->
         <scene sceneID="PCN-MZ-Oui">
             <objects>
-                <viewController id="aSE-cI-PIc" customClass="TodayViewController" customModule="DripWidget" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="aSE-cI-PIc" customClass="TodayViewController" customModule="TodayWidget" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="oTW-2f-Uei">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,7 +27,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zmU-l4-pgX">
                                 <rect key="frame" x="0.0" y="44" width="320" height="121"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyN-WA-EXI" customClass="UIBorderedButton" customModule="DripWidget" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyN-WA-EXI" customClass="UIBorderedButton" customModule="TodayWidget" customModuleProvider="target">
                                         <rect key="frame" x="10" y="10" width="300" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="UsG-yH-VG4"/>
@@ -40,7 +40,7 @@
                                             <action selector="mainButtonPressed" destination="aSE-cI-PIc" eventType="touchUpInside" id="2lx-qV-GaP"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGT-qy-iIH" customClass="UIBorderedButton" customModule="DripWidget" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGT-qy-iIH" customClass="UIBorderedButton" customModule="TodayWidget" customModuleProvider="target">
                                         <rect key="frame" x="10" y="66" width="145" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="qWP-e2-TTh"/>
@@ -53,7 +53,7 @@
                                             <action selector="leftButtonPressed" destination="aSE-cI-PIc" eventType="touchUpInside" id="GTb-kE-IrP"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doO-LE-s5E" customClass="UIBorderedButton" customModule="DripWidget" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doO-LE-s5E" customClass="UIBorderedButton" customModule="TodayWidget" customModuleProvider="target">
                                         <rect key="frame" x="165" y="66" width="145" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="Jaa-Fh-phV"/>
@@ -84,7 +84,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1p2-Pm-tLJ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 ml" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3x-s3-oL9">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3x-s3-oL9">
                                         <rect key="frame" x="12" y="10" width="296" height="24"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                         <color key="textColor" red="0.32691705230000001" green="0.42467555400000001" blue="0.96480309959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

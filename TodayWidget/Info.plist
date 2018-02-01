@@ -19,7 +19,13 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>8</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Drip uses HealthKit to read your daily water consumption.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Drip uses HealthKit to store your daily water consumption.</string>
 	<key>NSExtension</key>
 	<dict>
 		<key>NSExtensionMainStoryboard</key>
