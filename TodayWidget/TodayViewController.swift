@@ -23,9 +23,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //    extensionContext?.widgetLargestAvailableDisplayMode = .expanded
-        
         extensionContext?.widgetLargestAvailableDisplayMode = .expanded
     }
     
@@ -73,8 +70,11 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                 let unitTypeString = UserDefaults.shared.string(forKey: DefaultsKey.unitType)!
                 let unitType = UnitType(rawValue: unitTypeString)!
                 let hkUnit = unitType.associatedHKUnit()
-                let displayValue = quantity.doubleValue(for: hkUnit)
-                self.drankTodayValueLabel.text = "\(displayValue.rounded(toPlaces: 1)) \(unitType.toUnitString())"
+                if let displayValue = quantity?.doubleValue(for: hkUnit).rounded(toPlaces: 1) {
+                    self.drankTodayValueLabel.text = "\(displayValue) \(unitType.toUnitString())"
+                } else {
+                    self.drankTodayValueLabel.text = "Unlock to view."
+                }
             }
         }
     }

@@ -42,7 +42,7 @@ class HealthKitManager: NSObject {
     
     
     //MARK: - Fetching
-    func getDietaryWater(on date: Date, _ completionHandler: @escaping (_ dietaryWaters: HKQuantity) -> Void) {
+    func getDietaryWater(on date: Date, _ completionHandler: @escaping (_ dietaryWaters: HKQuantity?) -> Void) {
         
         let sampleType = HKQuantityType.quantityType(forIdentifier: .dietaryWater)!
         let startOfDate = Calendar.current.startOfDay(for: date)
@@ -53,8 +53,9 @@ class HealthKitManager: NSObject {
         
         let query = HKStatisticsQuery(quantityType: sampleType, quantitySamplePredicate: predicate, options: .cumulativeSum) { (query, result, error) in
             
-            guard error == nil else { return }
-            guard let result = result else { return }
+            guard error == nil else { completionHandler(nil); return }
+            
+            guard let result = result else { completionHandler(nil); return  }
             
             if let sum = result.sumQuantity() {
                 completionHandler(sum)
