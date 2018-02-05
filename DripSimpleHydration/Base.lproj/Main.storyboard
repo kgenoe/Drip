@@ -77,8 +77,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JUJ-cb-HdS" userLabel="Bottom View">
                                 <rect key="frame" x="0.0" y="348.5" width="375" height="318.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9S7-mO-Ey2" customClass="UIBorderedButton" customModule="DripSimpleHydration" customModuleProvider="target">
-                                        <rect key="frame" x="25" y="22" width="325" height="124"/>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9S7-mO-Ey2" customClass="UIBorderedButton" customModule="DripSimpleHydration" customModuleProvider="target">
+                                        <rect key="frame" x="25" y="22" width="325" height="125"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                         <state key="normal" title="+2 Cups">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -87,8 +87,8 @@
                                             <action selector="mainButtonPressed" destination="MlE-0p-rCO" eventType="touchUpInside" id="xla-J8-yKR"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0tF-j8-iE8" customClass="UIBorderedButton" customModule="DripSimpleHydration" customModuleProvider="target">
-                                        <rect key="frame" x="200" y="171" width="150" height="126"/>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0tF-j8-iE8" customClass="UIBorderedButton" customModule="DripSimpleHydration" customModuleProvider="target">
+                                        <rect key="frame" x="200" y="172" width="150" height="125"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                         <state key="normal" title="+1 Cup">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -97,8 +97,8 @@
                                             <action selector="rightButtonPressed" destination="MlE-0p-rCO" eventType="touchUpInside" id="eWF-6p-dr5"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BwG-5i-haA" customClass="UIBorderedButton" customModule="DripSimpleHydration" customModuleProvider="target">
-                                        <rect key="frame" x="25" y="171" width="150" height="126"/>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BwG-5i-haA" customClass="UIBorderedButton" customModule="DripSimpleHydration" customModuleProvider="target">
+                                        <rect key="frame" x="25" y="172" width="150" height="125"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                         <state key="normal" title="+0.5 Cups">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -110,14 +110,14 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.3294117647" green="0.42352941179999998" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstItem="0tF-j8-iE8" firstAttribute="height" relation="lessThanOrEqual" secondItem="9S7-mO-Ey2" secondAttribute="height" priority="750" id="5E9-6R-jdL"/>
                                     <constraint firstItem="BwG-5i-haA" firstAttribute="top" secondItem="9S7-mO-Ey2" secondAttribute="bottom" constant="25" id="8vY-cH-dz3"/>
                                     <constraint firstItem="9S7-mO-Ey2" firstAttribute="top" secondItem="JUJ-cb-HdS" secondAttribute="top" constant="22" id="Eqk-o4-HPY"/>
                                     <constraint firstItem="9S7-mO-Ey2" firstAttribute="centerY" secondItem="JUJ-cb-HdS" secondAttribute="centerY" constant="-75.25" id="JCc-Eu-La2"/>
                                     <constraint firstAttribute="bottom" secondItem="0tF-j8-iE8" secondAttribute="bottom" constant="21.5" id="JRz-6H-cxL"/>
-                                    <constraint firstItem="BwG-5i-haA" firstAttribute="height" relation="lessThanOrEqual" secondItem="9S7-mO-Ey2" secondAttribute="height" priority="750" id="LpV-Mw-HVK"/>
+                                    <constraint firstItem="BwG-5i-haA" firstAttribute="height" relation="lessThanOrEqual" secondItem="9S7-mO-Ey2" secondAttribute="height" id="LpV-Mw-HVK"/>
                                     <constraint firstAttribute="trailing" secondItem="9S7-mO-Ey2" secondAttribute="trailing" constant="25" id="M7A-Lc-dhr"/>
                                     <constraint firstAttribute="trailing" secondItem="0tF-j8-iE8" secondAttribute="trailing" constant="25" id="NRl-I6-9Sr"/>
+                                    <constraint firstItem="0tF-j8-iE8" firstAttribute="height" relation="lessThanOrEqual" secondItem="9S7-mO-Ey2" secondAttribute="height" id="P32-ax-YZk"/>
                                     <constraint firstItem="BwG-5i-haA" firstAttribute="leading" secondItem="JUJ-cb-HdS" secondAttribute="leading" constant="25" id="RCM-QQ-FnF"/>
                                     <constraint firstItem="0tF-j8-iE8" firstAttribute="top" secondItem="9S7-mO-Ey2" secondAttribute="bottom" constant="25" id="SZV-db-Dn7"/>
                                     <constraint firstItem="9S7-mO-Ey2" firstAttribute="leading" secondItem="JUJ-cb-HdS" secondAttribute="leading" constant="25" id="WWr-w8-J59"/>

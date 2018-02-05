@@ -144,10 +144,8 @@
 				2712F8311FFED36F00AE9DA0 /* DripSimpleHydration.entitlements */,
 				2712F81F1FFED34400AE9DA0 /* AppDelegate.swift */,
 				2712F8391FFED62300AE9DA0 /* Model */,
-				2712F8351FFED56200AE9DA0 /* MainViewController.swift */,
-				2712F8371FFED5E500AE9DA0 /* SettingsViewController.swift */,
-				272B913A200AB398002449D5 /* DonationsViewController.swift */,
-				2712F8431FFED90E00AE9DA0 /* UIBorderedButton.swift */,
+				274F0BF32028F78E0013CD46 /* View Controllers */,
+				274F0BF42028F7A10013CD46 /* Views */,
 				2712F83C1FFED68400AE9DA0 /* Helpers */,
 				272B9139200AB1FD002449D5 /* User Defaults */,
 				2712F8261FFED34400AE9DA0 /* Assets.xcassets */,
@@ -206,6 +204,24 @@
 				2712F8411FFED76F00AE9DA0 /* InitialDefaults.swift */,
 			);
 			path = "User Defaults";
+			sourceTree = "<group>";
+		};
+		274F0BF32028F78E0013CD46 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2712F8351FFED56200AE9DA0 /* MainViewController.swift */,
+				2712F8371FFED5E500AE9DA0 /* SettingsViewController.swift */,
+				272B913A200AB398002449D5 /* DonationsViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		274F0BF42028F7A10013CD46 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2712F8431FFED90E00AE9DA0 /* UIBorderedButton.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		951D52ECE5805B5F320D3934 /* Pods */ = {
