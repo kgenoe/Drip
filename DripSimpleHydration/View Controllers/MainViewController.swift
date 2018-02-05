@@ -25,6 +25,8 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var drankTodayValueLabel: UILabel!
     
+    @IBOutlet weak var buttonContainerView: UIView!
+    
     @IBOutlet weak var mainDrinkButton: UIBorderedButton!
     
     @IBOutlet weak var leftDrinkButton: UIBorderedButton!
@@ -78,6 +80,24 @@ class MainViewController: UIViewController {
         super.viewDidDisappear(animated)
         waveView?.stop()
         waveView = nil
+    }
+    
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        let areaHeight = buttonContainerView.frame.height
+        let areaWidth = buttonContainerView.frame.width
+        
+        let availableButtonHeight = areaHeight-(25*3)
+        let buttonHeight = availableButtonHeight/2
+        
+        let mainButtonWidth = areaWidth-50
+        let otherButtonWidth = (areaWidth-75)/2
+        
+        mainDrinkButton.frame = CGRect(x: 25, y: 25, width: mainButtonWidth, height: buttonHeight)
+        leftDrinkButton.frame = CGRect(x: 25, y: 50+buttonHeight, width: otherButtonWidth, height: buttonHeight)
+        rightDrinkButton.frame = CGRect(x: 50+otherButtonWidth, y: 50+buttonHeight, width: otherButtonWidth, height: buttonHeight)
     }
     
     
