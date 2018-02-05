@@ -19,13 +19,9 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>8</string>
+	<string>9</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
-	<key>NSHealthShareUsageDescription</key>
-	<string>Drip uses HealthKit to read your daily water consumption.</string>
-	<key>NSHealthUpdateUsageDescription</key>
-	<string>Drip uses HealthKit to store your daily water consumption.</string>
 	<key>NSExtension</key>
 	<dict>
 		<key>NSExtensionMainStoryboard</key>
@@ -33,5 +29,9 @@
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.widget-extension</string>
 	</dict>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Drip uses HealthKit to read your daily water consumption.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Drip uses HealthKit to store your daily water consumption.</string>
 </dict>
 </plist>
