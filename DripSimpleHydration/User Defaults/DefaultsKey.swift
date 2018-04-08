@@ -37,4 +37,7 @@ struct DefaultsKey {
     }
     
     static var mostRecentWater: String = "mostRecentWater"
+    
+    static var mostRecentWaterDate: String = "mostRecentWaterDate"
+    
 }

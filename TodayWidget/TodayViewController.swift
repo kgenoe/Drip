@@ -48,20 +48,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     }
     
     
-    
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(animated)
-//
-//        HealthKitManager.shared.getDietaryWater(on: Date()) { quantity in
-//            let unitTypeString = UserDefaults.shared.string(forKey: DefaultsKey.unitType)!
-//            let unitType = UnitType(rawValue: unitTypeString)!
-//            let hkUnit = unitType.associatedHKUnit()
-//            guard let displayValue = quantity?.doubleValue(for: hkUnit).rounded(toPlaces: 1) else { return }
-//            UserDefaults.shared.set(displayValue, forKey: DefaultsKey.mostRecentWater)
-//        }
-//    }
-    
-    
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
         refreshTodaysDrinkCount()
         completionHandler(NCUpdateResult.noData)
@@ -77,24 +63,22 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     }
     
     
+    
     func refreshTodaysDrinkCount() {
         HealthKitManager.shared.getDietaryWater(on: Date()) { quantity in
             let unitTypeString = UserDefaults.shared.string(forKey: DefaultsKey.unitType)!
             let unitType = UnitType(rawValue: unitTypeString)!
             let hkUnit = unitType.associatedHKUnit()
-            let displayValue = quantity?.doubleValue(for: hkUnit).rounded(toPlaces: 1) ?? UserDefaults.shared.double(forKey: DefaultsKey.mostRecentWater)
+            let displayValue = quantity?.doubleValue(for: hkUnit).rounded(toPlaces: 1) ?? self.mostRecentWater
             DispatchQueue.main.async {
                 self.drankTodayValueLabel.text = "\(displayValue) \(unitType.toUnitString())"
             }
+            
+            // reset most recent water
+            self.setMostRecentWater(newValue: displayValue)
         }
     }
     
-    // Updates mostRecentWater in UserDefaults, used to display water consumed, in the widget when the phone is locked
-    private func updateMostRecentWater(_ added: Double) {
-        let current = UserDefaults.shared.double(forKey: DefaultsKey.mostRecentWater)
-        let updatedMostRecentWater = current+added
-        UserDefaults.shared.set(updatedMostRecentWater, forKey: DefaultsKey.mostRecentWater)
-    }
     
     
     //MARK: - UI Actions
@@ -102,7 +86,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         let unitTypeString = UserDefaults.shared.string(forKey: DefaultsKey.unitType)!
         let unitType = UnitType(string: unitTypeString)!
         let value = UserDefaults.shared.double(forKey: DefaultsKey.leftKey(for: unitType))
-        updateMostRecentWater(value)
+        addValueToMostRecentWater(valueToAdd: value)
         let quantity = HKQuantity(unit: unitType.associatedHKUnit(), doubleValue: value)
         HealthKitManager.shared.saveDietaryWater(quantity: quantity) {
             self.refreshTodaysDrinkCount()
@@ -114,7 +98,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         let unitTypeString = UserDefaults.shared.string(forKey: DefaultsKey.unitType)!
         let unitType = UnitType(string: unitTypeString)!
         let value = UserDefaults.shared.double(forKey: DefaultsKey.rightKey(for: unitType))
-        updateMostRecentWater(value)
+        addValueToMostRecentWater(valueToAdd: value)
         let quantity = HKQuantity(unit: unitType.associatedHKUnit(), doubleValue: value)
         HealthKitManager.shared.saveDietaryWater(quantity: quantity) {
             self.refreshTodaysDrinkCount()
@@ -125,11 +109,42 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         let unitTypeString = UserDefaults.shared.string(forKey: DefaultsKey.unitType)!
         let unitType = UnitType(string: unitTypeString)!
         let value = UserDefaults.shared.double(forKey: DefaultsKey.mainKey(for: unitType))
-        updateMostRecentWater(value)
+        addValueToMostRecentWater(valueToAdd: value)
         let quantity = HKQuantity(unit: unitType.associatedHKUnit(), doubleValue: value)
         HealthKitManager.shared.saveDietaryWater(quantity: quantity) {
             self.refreshTodaysDrinkCount()
         }
     }
     
+    
+    
+    //MARK: - Most Recent Water
+    
+    /// The most recent water value saved to UserDefaults. Used as a fallback for when HealthKit is inaccessible.
+    var mostRecentWater: Double {
+        // If mostRecentWater is from today, return it
+        if let saveDate = UserDefaults.shared.value(forKey: DefaultsKey.mostRecentWaterDate) as? Date,
+            Calendar.current.isDateInToday(saveDate) {
+            return UserDefaults.shared.double(forKey: DefaultsKey.mostRecentWater)
+        } // Otherwise, return 0
+        else {
+            return 0
+        }
+    }
+    
+    // Adds valueToAdd to the current mostRecentWater and updates the vale in UserDefaults
+    private func addValueToMostRecentWater(valueToAdd: Double) {
+        let current = UserDefaults.shared.double(forKey: DefaultsKey.mostRecentWater)
+        let updatedMostRecentWater = current+valueToAdd
+        UserDefaults.shared.set(updatedMostRecentWater, forKey: DefaultsKey.mostRecentWater)
+        UserDefaults.shared.set(Date(), forKey: DefaultsKey.mostRecentWaterDate)
+    }
+    
+    // Replaces current mostRecentWater in UserDefaults with the given newValue
+    private func setMostRecentWater(newValue: Double) {
+        UserDefaults.shared.set(newValue, forKey: DefaultsKey.mostRecentWater)
+        UserDefaults.shared.set(Date(), forKey: DefaultsKey.mostRecentWaterDate)
+    }
 }
+
+
